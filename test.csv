@@ -1,0 +1,21 @@
+pclass,name,sex,age,sibsp,parch,ticket,fare,cabin,embarked,survived
+1,"Allen, Miss. Elisabeth Walton",female,29,0,0,24160,211.3375,B5,S,1
+1,"Allison, Master. Hudson Trevor",male,0.9167,1,2,113781,151.55,C22 C26,S,1
+1,"Allison, Miss. Helen Loraine",female,2,1,2,113781,151.55,C22 C26,S,0
+1,"Allison, Mr. Hudson Joshua Creighton",male,30,1,2,113781,151.55,C22 C26,S,0
+1,"Allison, Mrs. Hudson J C (Bessie Waldo Daniels)",female,25,1,2,113781,151.55,C22 C26,S,0
+1,"Anderson, Mr. Harry",male,48,0,0,19952,26.55,E12,S,1
+1,"Andrews, Miss. Kornelia Theodosia",female,63,1,0,13502,77.9583,D7,S,1
+1,"Andrews, Mr. Thomas Jr",male,39,0,0,112050,0,A36,S,0
+1,"Appleton, Mrs. Edward Dale (Charlotte Lamson)",female,53,2,0,11769,51.4792,C101,S,1
+1,"Artagaveytia, Mr. Ramon",male,71,0,0,PC 17609,49.5042,,C,0
+1,"Astor, Col. John Jacob",male,47,1,0,PC 17757,227.525,C62 C64,C,0
+1,"Astor, Mrs. John Jacob (Madeleine Talmadge Force)",female,18,1,0,PC 17757,227.525,C62 C64,C,1
+1,"Aubart, Mme. Leontine Pauline",female,24,0,0,PC 17477,69.3,B35,C,1
+1,"Barber, Miss. Ellen ""Nellie""",female,26,0,0,19877,78.85,,S,1
+1,"Barkworth, Mr. Algernon Henry Wilson",male,80,0,0,27042,30,A23,S,1
+1,"Baumann, Mr. John D",male,,0,0,PC 17318,25.925,,S,0
+1,"Baxter, Mr. Quigg Edmond",male,24,0,1,PC 17558,247.5208,B58 B60,C,0
+1,"Baxter, Mrs. James (Helene DeLaudeniere Chaput)",female,50,0,1,PC 17558,247.5208,B58 B60,C,1
+1,"Bazzani, Miss. Albina",female,32,0,0,11813,76.2917,D15,C,1
+1,"Beattie, Mr. Thomson",male,36,0,0,13050,75.2417,C6,C,0
