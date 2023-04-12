@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-import Attributes
+import Attribute
 
 
 #reading data
@@ -11,7 +11,6 @@ numOfExamples = len(data.index)
 
 AttributesNames = list(data.columns)
 
-
 print(numOfAttributes)
 print(numOfExamples)
 print(AttributesNames)
@@ -19,17 +18,20 @@ print(AttributesNames)
 #dividing data into educational and experimental with 50 and 50
 
 #list of class nodes of attributes
-listOfAttributes = list
+
+
+listOfAttributes = []
 i = 0
 for attrName in AttributesNames:
-    # value = {c: (attrName==c).nonzero()[i] for c in np.unique(attrName)}    
+    # value = {c: (attrName==c).nonzero()[i] for c in np.unique(attrName)}   
+    # a = Attributes
+    values = []
     for dt in data[f'{attrName}']:
-        listOfAttributes.append(dt)
+        values.append(dt)
+    values = [*set(values)]
+    print(values)
+    a = Attribute.Attribute(attrName, values)
+    listOfAttributes.append(a)
     
-    # att = Attributes(attrName, value)
-    # i += 1
-res = [*set(listOfAttributes)]
-print(listOfAttributes)
-print(res)
 
-     
+print(listOfAttributes)
