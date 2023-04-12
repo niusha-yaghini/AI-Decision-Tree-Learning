@@ -17,10 +17,14 @@ def AttributesAndValues(data, AttributesNames):
         # unique_res = N.unique(res) 
         # for dt in data[f'{attrName}']:
         #     values.append(dt)
-        values = np.unique(np.array(data[f'{attrName}']))
+        # values = np.unique(np.array(data[f'{attrName}']))
+        values = [*set(data[f'{attrName}'])]
+        print(values)
+
         # values = [*set(values)]
         a = Attribute(attrName, values)
         listOfAttributes.append(a)
+    return listOfAttributes
         
         
     
