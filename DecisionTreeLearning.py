@@ -1,4 +1,4 @@
-import Tree
+import Tree as T
 
 def Plurality_Value(exs):
     return 0
@@ -24,7 +24,7 @@ def Decision_Tree_Learning(examples, attributes, parent_examples):
         #each attribute has values (such as "yes, No" or "Some, Full, None")
         A = max(entropy)
         #making a new decision tree with root A(choosen attribute)
-        tree = Tree.Making_Tree(A)
+        tree = T.Tree(A)
         for value in A:
             exs = list
             for e in examples:

@@ -1,10 +1,27 @@
 import pandas as pd
 import numpy as np
+import csv
 import Attribute
-
 
 #reading data
 data = pd.read_csv('test.csv')
+
+rows = list(data)
+print(rows[1])
+# pd.set_option('display.max_rows', None)
+# for r in data:
+#     print(r)
+# print(data.index)
+
+# print(data.index)
+# for i in data.index:
+#     print()
+# print(data[0].tolist)
+# print(data[1].tolist)
+# for row in data:
+#     # print(''.join(row))
+#     print(row)
+
 
 numOfAttributes = len(data.columns) - 1
 numOfExamples = len(data.index)
@@ -16,51 +33,10 @@ print(numOfExamples)
 print(AttributesNames)
 
 #dividing data into educational and experimental with 50 and 50
+trainExamples = originalList[:]
+testExamples = originalList[:]
 
 #list of class nodes of attributes
 
-
-# listOfAttributes = []
-# i = 0
-# for attrName in AttributesNames:
-#     # value = {c: (attrName==c).nonzero()[i] for c in np.unique(attrName)}   
-#     # a = Attributes
-#     values = []
-#     for dt in data[f'{attrName}']:
-#         values.append(dt)
-#     values = [*set(values)]
-#     print(values)
-#     a = Attribute.Attribute(attrName, values)
-#     listOfAttributes.append(a)
-    
-
-# print(listOfAttributes)
-
-# values = np.array(data['ticket'])
-# print(values)
-
-# values = np.unique(values)
-# # values = [*set(values)]
-# print(values)
-
-
-# listOfAttributes = []
-# for attrName in AttributesNames:
-#     # value = {c: (a==c).nonzero()[i] for c in np.unique(a)}   
-#     # values = []
-#     # res = N.array(list_inp) 
-#     # unique_res = N.unique(res) 
-#     # for dt in data[f'{attrName}']:
-#     #     values.append(dt)
-#     # values = np.array(data[f'{attrName}'])
-#     # values = np.unique(values)
-#     values = [*set(data[f'{attrName}'])]
-#     # print(values)
-#     a = Attribute.Attribute(attrName, values)
-#     # print(a)
-#     listOfAttributes.append(a)
-
-# print(listOfAttributes)
-
 var = Attribute.AttributesAndValues(data, AttributesNames)
-print(var)
+# print(var)
