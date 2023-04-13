@@ -8,9 +8,9 @@ f = open("myfile.txt", "x")
 class Tree:
     def __init__(self, root):
         self.root = root.name
-        self.children = root.value
+        self.children = root.values
         f.write(f"choosen attribute = {root.name}\n")    
-        f.write(f"values = {root.value}\n")    
+        f.write(f"values = {root.values}\n")    
 
     # with open ('writeme.txt', 'w') as file:  
     #     file.write('writeme')  

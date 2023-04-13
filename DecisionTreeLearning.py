@@ -1,9 +1,18 @@
 import Tree as T
 
+#when we run out of examples or attributes we use this function
 def Plurality_Value(exs):
-    return 0
+    survived = 0
+    unsurvived = 0
+    for i in exs.survived:
+        if(i==0): unsurvived+=1
+        if(i==1): survived+=1
+    if survived > unsurvived: return survived
+    else: return unsurvived
 
-def Importance(arg, examples):
+
+def Importance(attributes, examples):
+    
     return 0
 
 
@@ -17,12 +26,15 @@ def Decision_Tree_Learning(examples, attributes, parent_examples):
     elif (len(attributes)==0):
         return Plurality_Value(examples)
     else:
-        entropy = list
-        for arg in attributes:
-            entropy.append(Importance(arg, examples))
+        # entropy = []
+        # for arg in attributes:
+        #     entropy.append(Importance(arg, examples))
         #A is a attribute that has the biggest entropy of all
         #each attribute has values (such as "yes, No" or "Some, Full, None")
-        A = max(entropy)
+        # A = max(entropy)
+        
+        #importance gets the list of attributes and list of examples and return the attribute with biggest entropy on examples
+        A = Importance(attributes, examples)
         #making a new decision tree with root A(choosen attribute)
         tree = T.Tree(A)
         for value in A:

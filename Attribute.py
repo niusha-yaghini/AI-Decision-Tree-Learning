@@ -3,9 +3,9 @@ import numpy as np
 
 #attributes class
 class Attribute:
-    def __init__(self, name, value):
+    def __init__(self, name, values):
         self.name = name
-        self.value = value
+        self.values = values
 
 
 #making a list of objects of attribute class(we will have each attribute with its value)
