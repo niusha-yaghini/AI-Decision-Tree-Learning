@@ -6,7 +6,17 @@ import Attribute
 #reading data
 data = pd.read_csv('test.csv')
 
+print(data.loc[[15]])
 print(list(data.loc[[15]]))
+print(len(list(data.loc[[15]])))
+# print(list(data.loc[[15]])[0])
+# print(list(data.loc[[15]])[1])
+
+var = data.loc[[15]].pclass
+print("this is var")
+print(var)
+
+
 
 numOfAttributes = len(data.columns) - 1
 numOfExamples = len(data.index)
