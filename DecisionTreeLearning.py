@@ -1,4 +1,5 @@
 import Tree as T
+import numpy as np
 
 #when we run out of examples or attributes we use this function
 def Plurality_Value(exs):
@@ -10,18 +11,45 @@ def Plurality_Value(exs):
     if survived > unsurvived: return survived
     else: return unsurvived
 
+def _entropy(examples):
+    hist = np.bincount(examples)
+    ps = hist / len(y)
+    return -np.sum([p * np.log(p) for p in ps if p>0])
+    
+
+def gain(att, examples):
+    p = 0
+    for e in examples:
+        if(e.survived == 0):
+            p+=1
+    for a in att.values:
+        
 
 def Importance(attributes, examples):
-    
-    return 0
+    entropy = []
+    for att in attributes:
+        x = gain(att, examples)
+        entropy.append(x)
+        
+    return max(entropy)
 
+
+def same_value(examples):
+    a = examples[0].survived
+    for e in examples:
+        if(e.survived!=a):
+            return False
+    return True
+        
 
 #return a tree
-def Decision_Tree_Learning(examples, attributes, parent_examples):
+def Decision_Tree_Learning(examples, attributes, parent_examples=None):
     if (len(examples)==0):
         return Plurality_Value(parent_examples)
     #checking if all examples have the same classification or not
-    elif all(ex.survived == examples[0].survived for ex in examples):
+    # elif all(ex.survived == examples[0].survived for ex in examples):
+    #     return examples[0].survived
+    elif(same_value(examples)):
         return examples[0].survived
     elif (len(attributes)==0):
         return Plurality_Value(examples)
